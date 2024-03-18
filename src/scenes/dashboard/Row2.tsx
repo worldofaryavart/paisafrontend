@@ -57,7 +57,6 @@ const Row2 = () => {
       })
     );
   }, [productData]);
-  console.log("productexpenses", productExpenseData);
   return (
     <>
       <DashboardBox gridArea="d">
