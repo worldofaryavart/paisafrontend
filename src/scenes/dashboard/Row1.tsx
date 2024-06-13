@@ -1,7 +1,6 @@
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import { useGetKpisQuery } from "@/state/api";
-import { useTheme } from "@mui/material";
 import { useMemo } from "react";
 import {
   ResponsiveContainer,
@@ -20,7 +19,6 @@ import {
 } from "recharts";
 
 const Row1 = () => {
-  const { palette } = useTheme();
   const { data } = useGetKpisQuery();
   const revenueExpenses = useMemo(() => {
     return (
@@ -87,12 +85,12 @@ const Row1 = () => {
               >
                 <stop
                   offset={"5%"}
-                  stopColor={palette.primary[300]}
+                  stopColor='#b3cde0'
                   stopOpacity={0.5}
                 />
                 <stop
                   offset={"95%"}
-                  stopColor={palette.primary[300]}
+                  stopColor='#b3cde0'
                   stopOpacity={0}
                 />
               </linearGradient>
@@ -105,12 +103,12 @@ const Row1 = () => {
               >
                 <stop
                   offset={"5%"}
-                  stopColor={palette.primary[300]}
+                  stopColor=''
                   stopOpacity={0.5}
                 />
                 <stop
                   offset={"95%"}
-                  stopColor={palette.primary[300]}
+                  stopColor="#b3cde0"
                   stopOpacity={0}
                 />
               </linearGradient>
@@ -131,7 +129,7 @@ const Row1 = () => {
               type="monotone"
               dataKey="revenue"
               dot={true}
-              stroke={palette.primary.main}
+              stroke="#364fc7"
               fillOpacity={1}
               fill="url(#colorRevenue)"
             />
@@ -139,7 +137,7 @@ const Row1 = () => {
               type="monotone"
               dataKey="expenses"
               dot={true}
-              stroke={palette.primary.main}
+              stroke="#364fc7"
               fillOpacity={1}
               fill="url(#colorExpenses)"
             />
@@ -162,7 +160,7 @@ const Row1 = () => {
               bottom: 55,
             }}
           >
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke="#364fc7" />
             <XAxis
               dataKey="name"
               tickLine={false}
@@ -193,14 +191,14 @@ const Row1 = () => {
               type="monotone"
               dataKey="profit"
               dot={true}
-              stroke={palette.tertiary[500]}
+              stroke="#5c7cfa"
             />
             <Line
               yAxisId="right"
               type="monotone"
               dataKey="revenue"
               dot={true}
-              stroke={palette.primary.main}
+              stroke="#364fc7"
             />
           </LineChart>
         </ResponsiveContainer>
@@ -227,17 +225,17 @@ const Row1 = () => {
               <linearGradient id="colorRevenue" x1={"0"} y1={"0"} x2={"0"} y2={"1"}>
                 <stop
                   offset={"5%"}
-                  stopColor={palette.primary[300]}
+                  stopColor="#b3cde0"
                   stopOpacity={0.8}
                 />
                 <stop
                   offset={"95%"}
-                  stopColor={palette.primary[300]}
+                  stopColor="#b3cde0"
                   stopOpacity={0}
                 />
               </linearGradient>
             </defs>
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke="#364fc7" />
             <XAxis
               dataKey="name"
               axisLine={false}
@@ -249,7 +247,7 @@ const Row1 = () => {
             <Bar
               dataKey="revenue"
               fill="url(#colorRevenue)"
-              activeBar={<Rectangle fill={"url(#colorRevenue)"} stroke="blue" />}
+              activeBar={<Rectangle fill={"url(#colorRevenue)"} stroke="#364fc7" />}
             />
           </BarChart>
         </ResponsiveContainer>

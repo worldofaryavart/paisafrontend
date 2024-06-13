@@ -2,7 +2,7 @@ import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetProductsQuery, useGetKpisQuery } from "@/state/api";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography} from "@mui/material";
 import { useMemo } from "react";
 import {
   CartesianGrid,
@@ -26,8 +26,7 @@ const pieData = [
 ];
 
 const Row2 = () => {
-  const { palette } = useTheme();
-  const pieColor = [palette.primary[800], palette.primary[300]];
+  const pieColor = ["#364fc7", "#b3cde0"];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
   const operationalExpenses = useMemo(() => {
@@ -75,7 +74,7 @@ const Row2 = () => {
               bottom: 55,
             }}
           >
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke="#364fc7" />
             <XAxis
               dataKey="name"
               tickLine={false}
@@ -101,14 +100,14 @@ const Row2 = () => {
               type="monotone"
               dataKey="Non Operational Expenses"
               dot={true}
-              stroke={palette.tertiary[500]}
+              stroke="#5c7cfa"
             />
             <Line
               yAxisId="right"
               type="monotone"
               dataKey="Operational Expenses"
               dot={true}
-              stroke={palette.primary.main}
+              stroke="#364fc7"
             />
           </LineChart>
         </ResponsiveContainer>
@@ -149,7 +148,7 @@ const Row2 = () => {
             <Typography
               m={"0.3rem 0"}
               variant="h3"
-              color={palette.primary[300]}
+              color={"#b3cde0"}
             >
               83
             </Typography>
@@ -184,7 +183,7 @@ const Row2 = () => {
               left: -10,
             }}
           >
-            <CartesianGrid stroke={palette.grey[800]} />
+            <CartesianGrid stroke={"#364fc7"} />
             <XAxis
               type="number"
               dataKey="price"
@@ -208,7 +207,7 @@ const Row2 = () => {
             <Scatter
               name="Product Expense Ratio"
               data={productExpenseData}
-              fill={palette.tertiary[500]}
+              fill="#5c7cfa"
             />
           </ScatterChart>
         </ResponsiveContainer>
