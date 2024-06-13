@@ -1,5 +1,5 @@
 import { useGetKpisQuery } from '@/state/api';
-import React, { useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import DashboardBox from '@/components/DashboardBox';
 import { Box, Button, Typography, useTheme } from '@mui/material';
 import FlexBetween from '@/components/FlexBetween';

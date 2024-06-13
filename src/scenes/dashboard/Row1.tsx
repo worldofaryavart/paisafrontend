@@ -20,7 +20,6 @@ import {
 } from "recharts";
 
 const Row1 = () => {
-  // this is row 1 
   const { palette } = useTheme();
   const { data } = useGetKpisQuery();
   const revenueExpenses = useMemo(() => {
