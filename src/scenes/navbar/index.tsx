@@ -1,7 +1,7 @@
 //eslint-disable-next-line
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import FlexBetween from "@/components/FlexBetween";
 
@@ -17,6 +17,7 @@ const COLOR = {
 
 const Navbar = () => {
   const [selected, setSelected] = useState("dashboard");
+  const { palette } = useTheme();
 
   return (
     <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={COLOR["indigo-100"]}>
@@ -34,7 +35,7 @@ const Navbar = () => {
             to="/"
             onClick={() => setSelected("dashboard")}
             style={{
-              color: selected === "dashboard" ? "inherit" : COLOR['indigo-800'],
+              color: selected === "dashboard" ? "inherit" : palette.primary.dark,
               textDecoration: "inherit",
             }}
           >
