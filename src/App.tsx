@@ -52,7 +52,7 @@ function App() {
             open={openSnackbar}
             autoHideDuration={10000}
             onClose={handleClose}
-            message="Website may take 1-2 minutes to load as it's backed by a free tier host. If it doesn't load, try reloading."
+            message="Website may take 1-2 minutes to load as it's backend hosted on a free tier hosting service. If it doesn't load, try reloading."
             action={
               <>
                 <Button color="secondary" size="small" onClick={handleReload}>
