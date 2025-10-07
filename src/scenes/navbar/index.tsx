@@ -25,7 +25,7 @@ const Navbar = () => {
       <FlexBetween gap="0.75rem" sx={{ "&:hover": { color: COLOR["indigo-100"] }}}>
         <CurrencyRupeeIcon sx={{ fontSize: "28px" }} />
         <Typography variant="h4" fontSize="20px">
-          Paisa
+          Finnovate
         </Typography>
       </FlexBetween>
       {/*Right Side*/}
